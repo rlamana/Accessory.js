@@ -39,10 +39,22 @@ var app = {
         
         readButton.addEventListener('click', function() {
             cordova.exec(
-                function callback(data) {
-                    resultsElement.innerHTML = 'Data read: ' + data.data;
-                    console.log('Read data');
-                    console.log(data);
+                function callback(buffer) {
+                    var result, str = '0x';
+                         
+                    if(!(buffer instanceof ArrayBuffer))
+                         throw new TypeError();
+                         
+                    // Convert buffer to an array of bytes
+                    result = new Int8Array(buffer);
+                    console.log('Read from accessory');
+                         
+                    // Convert to a string showing hexadecimal result
+                    for(var i=0,length=result.length; i<length; i++)
+                         str += result[i].toString(16);
+                         
+                    resultsElement.innerHTML = 'Data read: ' + str;
+
                 },
                 function errorHandler(err) {
                     alert('Error');

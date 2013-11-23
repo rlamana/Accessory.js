@@ -11,16 +11,15 @@
 @implementation AccessoryBridge
 
 - (void) read:(CDVInvokedUrlCommand*)command {
-    NSDictionary* jsonObj = [ [NSDictionary alloc]
-                             initWithObjectsAndKeys :
-                             @"Data from the Obj-C read call!.", @"data",
-                             @"true", @"success",
-                             nil
-                             ];
+    NSMutableData* data = [[NSMutableData alloc] init];
+    uint16_t value = (uint16_t) 0x4000;
     
-    CDVPluginResult* pluginResult = [ CDVPluginResult
-                                     resultWithStatus    : CDVCommandStatus_OK
-                                     messageAsDictionary : jsonObj
+    [data appendBytes:(void*)&value length:2];
+
+    
+    CDVPluginResult* pluginResult = [CDVPluginResult
+                                     resultWithStatus: CDVCommandStatus_OK
+                                     messageAsArrayBuffer: data
                                      ];
     
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
