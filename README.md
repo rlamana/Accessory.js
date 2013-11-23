@@ -7,3 +7,5 @@ The library will provide a common API to communicate with accessories in differe
 * **iOS** (In progress)
 * **Android** (Not yet supported)
 * **FirefoxOS** (Not yet supported)
+ 
+A <a href="http://www.stellarkite.com">Stellarkite</a> project.
