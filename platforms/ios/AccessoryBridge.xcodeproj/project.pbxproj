@@ -20,8 +20,8 @@
 		30A0434914DC770100060A13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A0434614DC770100060A13 /* Localizable.strings */; };
 		5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEE5B34173C68D80009041E /* CoreLocation.framework */; };
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
-		6C7C8AC51840272A008EEADF /* AccessoryBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C8AC41840272A008EEADF /* AccessoryBridge.m */; };
 		6C7C8AC718407ABD008EEADF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C8AC618407ABD008EEADF /* Images.xcassets */; };
+		6CA82B9718409ECB007A2115 /* AccessoryBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA82B9618409ECB007A2115 /* AccessoryBridge.m */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
 /* End PBXBuildFile section */
 
@@ -61,9 +61,9 @@
 		32CA4F630368D1EE00C91783 /* AccessoryBridge-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AccessoryBridge-Prefix.pch"; sourceTree = "<group>"; };
 		5AEE5B34173C68D80009041E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		6C7C8AC31840272A008EEADF /* AccessoryBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessoryBridge.h; sourceTree = "<group>"; };
-		6C7C8AC41840272A008EEADF /* AccessoryBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessoryBridge.m; sourceTree = "<group>"; };
 		6C7C8AC618407ABD008EEADF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AccessoryBridge/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		6CA82B9518409ECB007A2115 /* AccessoryBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessoryBridge.h; sourceTree = "<group>"; };
+		6CA82B9618409ECB007A2115 /* AccessoryBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessoryBridge.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* AccessoryBridge-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AccessoryBridge-Info.plist"; path = "../AccessoryBridge-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = AccessoryBridge/config.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,8 +92,6 @@
 				302D95F014D2391D003F00A1 /* MainViewController.xib */,
 				1D3623240D0F684500981E51 /* AppDelegate.h */,
 				1D3623250D0F684500981E51 /* AppDelegate.m */,
-				6C7C8AC31840272A008EEADF /* AccessoryBridge.h */,
-				6C7C8AC41840272A008EEADF /* AccessoryBridge.m */,
 			);
 			name = Classes;
 			path = AccessoryBridge/Classes;
@@ -185,6 +183,8 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				6CA82B9518409ECB007A2115 /* AccessoryBridge.h */,
+				6CA82B9618409ECB007A2115 /* AccessoryBridge.m */,
 			);
 			name = Plugins;
 			path = AccessoryBridge/Plugins;
@@ -320,7 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				6C7C8AC51840272A008EEADF /* AccessoryBridge.m in Sources */,
+				6CA82B9718409ECB007A2115 /* AccessoryBridge.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 			);

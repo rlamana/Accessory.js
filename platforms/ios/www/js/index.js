@@ -21,6 +21,7 @@ var app = {
     initialize: function() {
         this.bindEvents();
     },
+    
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
@@ -28,6 +29,7 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
+    
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
@@ -40,16 +42,17 @@ var app = {
         readButton.addEventListener('click', function() {
             cordova.exec(
                 function callback(buffer) {
-                    var result, str = '0x';
+                    var result, str;
                          
                     if(!(buffer instanceof ArrayBuffer))
                          throw new TypeError();
                          
                     // Convert buffer to an array of bytes
-                    result = new Int8Array(buffer);
+                    result = new Uint8Array(buffer);
                     console.log('Read from accessory');
                          
                     // Convert to a string showing hexadecimal result
+                    str = '0x';
                     for(var i=0,length=result.length; i<length; i++)
                          str += result[i].toString(16);
                          
@@ -82,19 +85,5 @@ var app = {
                  [] // Arguments
             );
         });
-
-        
-        app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
     }
 };
