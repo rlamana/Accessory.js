@@ -1,7 +1,7 @@
 Accessory.js
 ============
 
-Cordova / PhoneGap plugin to create a bridge between javascript applications and hardware accessories connected to a mobile device
+Cordova / PhoneGap plugin to create a bridge between javascript applications and hardware accessories connected to a mobile device.
 
 The library will provide a common API to communicate with accessories in different mobile platforms using Javascript. Supported platforms:
 * **iOS** (In progress)
