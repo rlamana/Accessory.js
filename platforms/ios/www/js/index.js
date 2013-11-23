@@ -33,6 +33,45 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+        var resultsElement = document.getElementById('results'),
+            readButton = document.getElementById('read'),
+            writeButton = document.getElementById('write');
+        
+        readButton.addEventListener('click', function() {
+            cordova.exec(
+                function callback(data) {
+                    resultsElement.innerHTML = 'Data read: ' + data.data;
+                    console.log('Read data');
+                    console.log(data);
+                },
+                function errorHandler(err) {
+                    alert('Error');
+                },
+                'AccessoryBridge',
+                'read', // Execute this method on the above class
+                [] // Arguments
+            );
+        });
+        
+        writeButton.addEventListener('click', function() {
+            cordova.exec(
+                function callback(data) {
+                         resultsElement.innerHTML = 'Data read: ' + data.data;
+                         console.log('Read data');
+                         console.log(data);
+                },
+                
+                function errorHandler(err) {
+                         alert('Error');
+                 },
+                         
+                 'AccessoryBridge',
+                 'write', // Execute this method on the above class
+                 [] // Arguments
+            );
+        });
+
+        
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event

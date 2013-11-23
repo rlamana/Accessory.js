@@ -2,7 +2,7 @@
 <widget id="com.stellarkite.accessoryjs" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Hello Cordova</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        A sample of AccessoryBridge plugin.
     </description>
     <access origin="*" />
     <preference name="AllowInlineMediaPlayback" value="false" />
@@ -26,8 +26,14 @@
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
-    <author email="dev@callback.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    
+    <!-- Cometa plugin -->
+    <feature name="AccessoryBridge">
+        <param name="ios-package" value="AccessoryBridge" />
+    </feature>
+    
+    <author email="team@stellarkite.com" href="http://www.stellarkite.com">
+        Stellarkite Team
     </author>
     <content src="index.html" />
     <preference name="fullscreen" value="true" />
